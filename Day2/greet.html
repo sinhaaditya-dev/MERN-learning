@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting</title>
+</head>
+<body>
+    <h1>Entert Your Name</h1>
+    <input type="text" placeholder="Enter your name" id="name">
+    <button id="btnGreet" style="background-color: black; color:beige; height:28px; width: auto;">Greet</button>
+
+    <h3 id="greeting"></h3>
+    <script>
+        const name = document.getElementById("name");
+        const btnGreet = document.getElementById("btnGreet");
+        const greeting = document.getElementById("greeting");
+        btnGreet.addEventListener("click", ()=>{
+            greeting.innerHTML = "Hello, "+ name.value + "!" + "<br><br>Welcome to My Website.";
+        })
+    </script>
+</body>
+</html>

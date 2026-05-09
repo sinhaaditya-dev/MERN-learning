@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add</title>
+</head>
+<body style="background:linear-gradient(to right ,pink,rgb(96, 96, 224));">
+    <div style="height:100vh;">
+    <h1>Enter two Numbers</h1>
+    
+        Number1 <input type="number" placeholder="First Number" id="num1"><br><br>
+        Number2  <input type="number" placeholder="Second Number" id="num2"><br><br>
+
+        <button id="btnAdd" style="background-color: black; color:beige; height:28px; width: auto;">Add</button>
+        <button id="btnSub" style="background-color: black; color:beige; height:28px; width: auto;">Subtract</button>
+        <button id="btnMul" style="background-color: black; color:beige; height:28px; width: auto;">Multiply</button>
+        <button id="btnDiv" style="background-color: black; color:beige; height:28px; width: auto;">Divide</button>
+
+        <h3 id="result">Result</h3>
+
+        </div>
+    <script>
+        const num1 = document.getElementById("num1");
+        const num2 = document.getElementById("num2");
+        const btnAdd = document.getElementById("btnAdd");
+        const btnSub = document.getElementById("btnSub");
+        const btnMul = document.getElementById("btnMul");
+        const btnDiv = document.getElementById("btnDiv");
+        const result = document.getElementById("result");
+        btnAdd.addEventListener("click", ()=>{
+            let sum = parseInt(num1.value) + parseInt(num2.value)
+            result.innerText = "Result: "+ sum; })
+        btnSub.addEventListener("click", ()=>{
+            let diff = parseInt(num1.value) - parseInt(num2.value)
+            result.innerText = "Result: "+ diff; })
+        btnMul.addEventListener("click", ()=>{
+            let product = parseInt(num1.value) * parseInt(num2.value)
+            result.innerText = "Result: "+ product; })
+        btnDiv.addEventListener("click", ()=>{
+            let quotient = parseInt(num1.value) / parseInt(num2.value)
+            result.innerText = "Result: "+ quotient; })
+    </script>
+    
+</body>
+</html>
